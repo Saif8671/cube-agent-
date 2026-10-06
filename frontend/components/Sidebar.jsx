@@ -9,8 +9,6 @@ import {
   TrendingUp,
   FolderSync,
   Database,
-  ShieldCheck,
-  Scale,
   ChevronLeft,
   ChevronRight,
   Activity,
@@ -94,23 +92,18 @@ export default function Sidebar() {
           }`}
         >
           <div className="flex items-center space-x-3 min-w-0">
-            <div className="w-9 h-9 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-[#FF9900] shadow-sm shrink-0">
-              <Scale className="w-4 h-4" />
+            <div className="w-9 h-9 rounded-lg bg-white border border-gray-200 flex items-center justify-center shadow-subtle shrink-0 p-1 overflow-hidden">
+              <img
+                src="/brand/recovery-manager-logo.png"
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain"
+              />
             </div>
             {(isMobile || !collapsed) && (
-              <div className="min-w-0">
-                <div className="flex items-center space-x-2">
-                  <span className="font-bold text-gray-900 tracking-tight text-sm font-sans">
-                    RCY RECOVERY
-                  </span>
-                  <span className="text-[10px] bg-gray-100 text-gray-600 font-mono px-1.5 py-0.5 rounded font-semibold border border-gray-200">
-                    v1.0
-                  </span>
-                </div>
-                <p className="text-[11px] text-gray-500 font-medium truncate mt-0.5">
-                  Evidence Operations Center
-                </p>
-              </div>
+              <span className="font-bold text-gray-900 tracking-tight text-sm truncate">
+                Recovery Manager
+              </span>
             )}
           </div>
 
@@ -174,32 +167,7 @@ export default function Sidebar() {
 
       {/* Bottom Area */}
       <div className="p-3 space-y-3 border-t border-gray-100 shrink-0">
-        {/* Conservative AI Engine Badge Card */}
-        {(isMobile || !collapsed) && (
-          <div className="p-3.5 rounded-xl bg-gray-50 border border-gray-200/90 text-xs shadow-subtle">
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center space-x-2 text-gray-900 font-semibold text-xs">
-                <div className="w-5 h-5 rounded-md bg-orange-100 text-[#FF9900] flex items-center justify-center">
-                  <ShieldCheck className="w-3.5 h-3.5" />
-                </div>
-                <span>Conservative AI</span>
-              </div>
-              <div className="flex items-center space-x-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[9px] font-mono text-emerald-700 font-bold tracking-wider">
-                  ACTIVE
-                </span>
-              </div>
-            </div>
-            <p className="text-[11px] text-gray-500 leading-relaxed mt-1">
-              Zero hallucinated claims. Missing physical proof strictly yields{" "}
-              <span className="font-mono text-gray-800 font-bold bg-white px-1.5 py-0.5 rounded text-[10px] border border-gray-200">
-                SILENT
-              </span>
-              .
-            </p>
-          </div>
-        )}
+
 
         {/* Desktop Collapse Toggle */}
         {!isMobile && (

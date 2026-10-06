@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useWorkspace } from "../context/WorkspaceContext";
 import { api } from "../lib/api";
 import {
-  Scale,
   ShieldCheck,
   TrendingUp,
   FileCheck2,
@@ -232,24 +231,22 @@ export default function LandingPage() {
         }`}
       >
         <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo & Sub-label */}
-          <Link href="/" className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9900] rounded-lg p-1">
-            <div className="w-9 h-9 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-[#FF9900] shadow-subtle shrink-0 group-hover:border-[#FF9900] transition-colors">
-              <Scale className="w-5 h-5 text-[#FF9900]" />
+          {/* Brand Logo & Name */}
+          <Link
+            href="/"
+            className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF9900] rounded-lg p-1"
+          >
+            <div className="h-9 w-9 sm:h-10 sm:w-10 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center shadow-subtle shrink-0 group-hover:border-[#FF9900] transition-colors overflow-hidden p-1">
+              <img
+                src="/brand/recovery-manager-logo.png"
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-extrabold text-[#111827] tracking-tight text-sm">
-                  Recovery Manager
-                </span>
-                <span className="text-[10px] bg-orange-100 text-orange-900 font-mono px-1.5 py-0.5 rounded font-semibold border border-orange-200">
-                  Ops Console
-                </span>
-              </div>
-              <p className="text-[11px] text-[#6B7280] font-medium leading-none mt-0.5">
-                Evidence-First Recovery Ops
-              </p>
-            </div>
+            <span className="font-bold text-[#111827] tracking-tight text-base sm:text-lg">
+              Recovery Manager
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -284,7 +281,7 @@ export default function LandingPage() {
           <div className="flex items-center space-x-3">
             <Link
               href="/dashboard"
-              className="hidden sm:inline-flex items-center space-x-1.5 px-4 py-2 text-xs font-bold text-[#111827] bg-[#FF9900] hover:bg-[#E88A00] transition-colors rounded-lg shadow-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF9900] focus:outline-none"
+              className="hidden sm:inline-flex items-center space-x-1.5 px-4 py-2 text-xs font-semibold text-[#111827] bg-[#FF9900] hover:bg-[#E88A00] transition-colors rounded-lg shadow-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF9900] focus:outline-none"
             >
               <span>Enter Dashboard</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -338,7 +335,7 @@ export default function LandingPage() {
               <Link
                 href="/dashboard"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center space-x-2 px-4 py-2.5 rounded-lg bg-[#FF9900] hover:bg-[#E88A00] text-[#111827] text-sm font-bold shadow-sm"
+                className="w-full flex items-center justify-center space-x-2 px-4 py-2.5 rounded-lg bg-[#FF9900] hover:bg-[#E88A00] text-[#111827] text-sm font-semibold shadow-sm"
               >
                 <span>Enter Dashboard</span>
                 <ArrowRight className="w-4 h-4" />
@@ -361,12 +358,12 @@ export default function LandingPage() {
               {/* Eyebrow */}
               <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-xs font-semibold text-[#B45309]">
                 <span className="w-2 h-2 rounded-full bg-[#FF9900]" />
-                <span className="tracking-wider uppercase text-[11px] font-mono">
+                <span className="tracking-wider uppercase text-[11px] font-semibold">
                   DETERMINISTIC MARKETPLACE DISPUTE AUTOMATION
                 </span>
               </div>
 
-              {/* Main Headline (Strict single H1) */}
+              {/* Main Headline (Strict single H1 with Inter 700/800) */}
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#111827] leading-[1.15]">
                 Evidence first, claim second.
               </h1>
@@ -382,7 +379,7 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                 <Link
                   href="/dashboard"
-                  className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#FF9900] hover:bg-[#E88A00] text-[#111827] font-bold text-sm shadow-subtle flex items-center justify-center space-x-2 transition-all duration-150 group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF9900] focus:outline-none"
+                  className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#FF9900] hover:bg-[#E88A00] text-[#111827] font-semibold text-sm shadow-subtle flex items-center justify-center space-x-2 transition-all duration-150 group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF9900] focus:outline-none"
                 >
                   <span>Enter Dashboard</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -405,14 +402,14 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
               <div>
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FF9900] block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF9900] block">
                   Live Operations Snapshot
                 </span>
-                <h2 className="text-xl sm:text-2xl font-extrabold text-[#111827] tracking-tight mt-0.5">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#111827] tracking-tight mt-0.5">
                   Real-time operational ledger metrics.
                 </h2>
               </div>
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-[#E5E7EB] text-xs font-mono text-[#4B5563] shadow-subtle self-start sm:self-auto">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-[#E5E7EB] text-xs text-[#4B5563] shadow-subtle self-start sm:self-auto">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span>
                   Current workspace:{" "}
@@ -428,12 +425,12 @@ export default function LandingPage() {
               <div className="p-5 sm:p-6 rounded-xl bg-white border border-[#E5E7EB] shadow-subtle flex flex-col justify-between space-y-4">
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#6B7280]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
                       INGESTED MARKETPLACE CHARGES
                     </span>
                     <Receipt className="w-4 h-4 text-[#6B7280]" />
                   </div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#111827] tracking-tight pt-1">
+                  <div className="text-2xl sm:text-3xl font-bold tabular-nums text-[#111827] tracking-tight pt-1">
                     {snapshot.loading ? (
                       "—"
                     ) : snapshot.totalFees !== null ? (
@@ -446,7 +443,7 @@ export default function LandingPage() {
                     )}
                   </div>
                   {snapshot.totalChargesCount !== null && (
-                    <div className="text-xs text-[#6B7280] font-mono">
+                    <div className="text-xs text-[#6B7280]">
                       Across {snapshot.totalChargesCount} evaluated charges
                     </div>
                   )}
@@ -461,12 +458,12 @@ export default function LandingPage() {
               <div className="p-5 sm:p-6 rounded-xl bg-white border-2 border-[#FF9900] shadow-subtle flex flex-col justify-between space-y-4 relative overflow-hidden">
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#B45309]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#B45309]">
                       IDENTIFIED RECOVERY POTENTIAL
                     </span>
                     <TrendingUp className="w-4 h-4 text-[#FF9900]" />
                   </div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#111827] tracking-tight pt-1">
+                  <div className="text-2xl sm:text-3xl font-bold tabular-nums text-[#111827] tracking-tight pt-1">
                     {snapshot.loading ? (
                       "—"
                     ) : snapshot.potentialRecovery !== null ? (
@@ -479,7 +476,7 @@ export default function LandingPage() {
                     )}
                   </div>
                   {snapshot.contradictedCount !== null && (
-                    <div className="text-xs text-[#067D68] font-semibold font-mono">
+                    <div className="text-xs text-[#067D68] font-semibold">
                       {snapshot.contradictedCount} charges eligible for dispute
                     </div>
                   )}
@@ -494,12 +491,12 @@ export default function LandingPage() {
               <div className="p-5 sm:p-6 rounded-xl bg-white border border-[#E5E7EB] shadow-subtle flex flex-col justify-between space-y-4">
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#6B7280]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6B7280]">
                       DISPUTE CLAIMS CREATED
                     </span>
                     <FileCheck2 className="w-4 h-4 text-[#6B7280]" />
                   </div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#111827] tracking-tight pt-1">
+                  <div className="text-2xl sm:text-3xl font-bold tabular-nums text-[#111827] tracking-tight pt-1">
                     {snapshot.loading ? (
                       "—"
                     ) : snapshot.claimsCount !== null ? (
@@ -527,13 +524,13 @@ export default function LandingPage() {
         <section id="problem" className="py-20 bg-white border-b border-[#E5E7EB] scroll-mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-12">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#FF9900]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#FF9900]">
                 THE OPERATIONAL REALITY
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] tracking-tight mt-1.5">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight mt-1.5">
                 Sellers get charged fees they cannot easily contest.
               </h2>
-              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed font-normal">
                 Inbound defect penalties, prep violations, and carton weight surcharges can appear long after the
                 underlying warehouse event. By the time a fee reaches a settlement report, the operational evidence
                 needed to challenge it may be difficult to locate, connect, and verify.
@@ -544,11 +541,11 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Problem 01 */}
               <div className="p-6 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
-                <div className="text-xs font-mono font-bold text-[#FF9900] bg-orange-50 border border-orange-200 px-2 py-0.5 rounded w-fit">
+                <div className="text-xs font-bold text-[#FF9900] bg-orange-50 border border-orange-200 px-2 py-0.5 rounded w-fit">
                   01
                 </div>
                 <h3 className="text-base font-bold text-[#111827]">Siloed Evidence</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   Scale logs, barcode scans, warehouse audits, photographs, and carrier records often live in separate
                   systems and are not directly connected to settlement line items.
                 </p>
@@ -556,11 +553,11 @@ export default function LandingPage() {
 
               {/* Problem 02 */}
               <div className="p-6 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
-                <div className="text-xs font-mono font-bold text-[#FF9900] bg-orange-50 border border-orange-200 px-2 py-0.5 rounded w-fit">
+                <div className="text-xs font-bold text-[#FF9900] bg-orange-50 border border-orange-200 px-2 py-0.5 rounded w-fit">
                   02
                 </div>
                 <h3 className="text-base font-bold text-[#111827]">Auto-Dispute Risk</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   Generating generic disputes without concrete evidence creates unnecessary rejection risk. Recovery
                   decisions should be grounded in observable operational records.
                 </p>
@@ -568,11 +565,11 @@ export default function LandingPage() {
 
               {/* Problem 03 */}
               <div className="p-6 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
-                <div className="text-xs font-mono font-bold text-[#FF9900] bg-orange-50 border border-orange-200 px-2 py-0.5 rounded w-fit">
+                <div className="text-xs font-bold text-[#FF9900] bg-orange-50 border border-orange-200 px-2 py-0.5 rounded w-fit">
                   03
                 </div>
                 <h3 className="text-base font-bold text-[#111827]">Strict Burden of Proof</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   A defensible dispute requires traceable evidence tied to the relevant shipment, order, SKU, unit, event,
                   and time window.
                 </p>
@@ -587,13 +584,13 @@ export default function LandingPage() {
         <section id="outcomes" className="py-20 bg-[#F7F8FA] border-b border-[#E5E7EB] scroll-mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-12">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#FF9900]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#FF9900]">
                 OUR CORE DIFFERENTIATOR
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] tracking-tight mt-1.5">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight mt-1.5">
                 Every charge resolves into a clear operational outcome.
               </h2>
-              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed font-normal">
                 Recovery Manager does not assume every fee should be disputed. Each evaluated charge is classified
                 according to the evidence available, with unsupported or conflicting cases explicitly preserved rather
                 than fabricated.
@@ -626,10 +623,10 @@ export default function LandingPage() {
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
                       <span>DISPUTE ELIGIBLE</span>
                     </span>
-                    <span className="text-[11px] font-mono font-bold text-emerald-700">CONTRADICTED</span>
+                    <span className="text-[11px] font-bold text-emerald-700">CONTRADICTED</span>
                   </div>
                   <h3 className="text-base font-bold text-[#111827]">Physical evidence contradicts the fee</h3>
-                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed">
+                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed font-normal">
                     Warehouse or operational records provide evidence that conflicts with the marketplace's stated defect or
                     deduction reason.
                   </p>
@@ -663,10 +660,10 @@ export default function LandingPage() {
                       <span className="w-1.5 h-1.5 rounded-full bg-rose-600" />
                       <span>FEE VALID</span>
                     </span>
-                    <span className="text-[11px] font-mono font-bold text-rose-700">SUPPORTED</span>
+                    <span className="text-[11px] font-bold text-rose-700">SUPPORTED</span>
                   </div>
                   <h3 className="text-base font-bold text-[#111827]">Evidence supports the fee</h3>
-                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed">
+                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed font-normal">
                     Available operational records substantiate that the reported defect or violation occurred.
                   </p>
                 </div>
@@ -699,10 +696,10 @@ export default function LandingPage() {
                       <span className="w-1.5 h-1.5 rounded-full bg-amber-600" />
                       <span>UNSUBSTANTIATED</span>
                     </span>
-                    <span className="text-[11px] font-mono font-bold text-amber-700">SILENT</span>
+                    <span className="text-[11px] font-bold text-amber-700">SILENT</span>
                   </div>
                   <h3 className="text-base font-bold text-[#111827]">No corroborating evidence found</h3>
-                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed">
+                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed font-normal">
                     No relevant warehouse or operational evidence was found for the charge, shipment, unit, or SKU.
                   </p>
                 </div>
@@ -735,10 +732,10 @@ export default function LandingPage() {
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
                       <span>HUMAN REVIEW</span>
                     </span>
-                    <span className="text-[11px] font-mono font-bold text-blue-700">UNCERTAIN</span>
+                    <span className="text-[11px] font-bold text-blue-700">UNCERTAIN</span>
                   </div>
                   <h3 className="text-base font-bold text-[#111827]">Evidence is conflicting or ambiguous</h3>
-                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed">
+                  <p className="text-xs text-[#4B5563] mt-2.5 leading-relaxed font-normal">
                     Available records provide conflicting signals or insufficient certainty to support a defensible automated
                     decision.
                   </p>
@@ -761,32 +758,34 @@ export default function LandingPage() {
                     &bull; Active Selection: <strong className="text-[#111827]">{activeData.key}</strong>
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-[#6B7280] bg-[#F7F8FA] border border-[#E5E7EB] px-2 py-0.5 rounded w-fit">
+                <span className="text-[10px] text-[#6B7280] bg-[#F7F8FA] border border-[#E5E7EB] px-2 py-0.5 rounded w-fit font-medium">
                   Illustrative Demonstration
                 </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                 <div className="p-4 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] space-y-2">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#6B7280]">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#6B7280]">
                     Stated Marketplace Fee
                   </span>
                   <div className="font-bold text-[#111827] text-sm">{activeData.sampleDeduction.type}</div>
-                  <div className="font-mono text-xs font-bold text-[#C40000]">{activeData.sampleDeduction.fee}</div>
+                  <div className="tabular-nums text-xs font-bold text-[#C40000]">{activeData.sampleDeduction.fee}</div>
                   <p className="text-[#6B7280] text-[11px]">{activeData.sampleDeduction.reason}</p>
                 </div>
 
                 <div className="p-4 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] space-y-2">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#6B7280]">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#6B7280]">
                     Warehouse Floor Proof
                   </span>
                   <div className="font-bold text-[#111827] text-sm">{activeData.sampleEvidence.type}</div>
-                  <div className="font-mono text-xs text-blue-700">Record: {activeData.sampleEvidence.recordId}</div>
+                  <div className="text-xs text-blue-700">
+                    Record: <span className="font-mono font-semibold">{activeData.sampleEvidence.recordId}</span>
+                  </div>
                   <p className="text-[#4B5563] text-[11px]">{activeData.sampleEvidence.finding}</p>
                 </div>
 
                 <div className="p-4 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] space-y-2">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#6B7280]">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#6B7280]">
                     Audit Disposition
                   </span>
                   <div className="inline-flex items-center space-x-1.5 px-2 py-0.5 rounded text-[11px] font-bold border w-fit"
@@ -820,13 +819,13 @@ export default function LandingPage() {
         <section id="pipeline" className="py-20 bg-white border-b border-[#E5E7EB] scroll-mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-12">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#FF9900]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#FF9900]">
                 RECOVERY PIPELINE
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] tracking-tight mt-1.5">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight mt-1.5">
                 From raw records to defensible recovery decisions.
               </h2>
-              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed font-normal">
                 A structured workflow connects financial deductions with operational evidence before a claim is
                 prepared.
               </p>
@@ -837,13 +836,13 @@ export default function LandingPage() {
               {/* Stage 01 */}
               <div className="p-5 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
+                  <span className="text-[10px] font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
                     01
                   </span>
                   <Database className="w-4 h-4 text-[#6B7280]" />
                 </div>
                 <h3 className="text-sm font-bold text-[#111827]">INGEST</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   Upload marketplace fee reports, carrier files, and operational audit records.
                 </p>
               </div>
@@ -851,13 +850,13 @@ export default function LandingPage() {
               {/* Stage 02 */}
               <div className="p-5 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
+                  <span className="text-[10px] font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
                     02
                   </span>
                   <Search className="w-4 h-4 text-[#6B7280]" />
                 </div>
                 <h3 className="text-sm font-bold text-[#111827]">MATCH</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   Connect charges with shipment IDs, order IDs, SKUs, units, and other available identifiers.
                 </p>
               </div>
@@ -865,13 +864,13 @@ export default function LandingPage() {
               {/* Stage 03 */}
               <div className="p-5 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
+                  <span className="text-[10px] font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
                     03
                   </span>
                   <Layers className="w-4 h-4 text-[#6B7280]" />
                 </div>
                 <h3 className="text-sm font-bold text-[#111827]">ASSESS</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   Evaluate observable evidence against the stated deduction reason.
                 </p>
               </div>
@@ -879,13 +878,13 @@ export default function LandingPage() {
               {/* Stage 04 */}
               <div className="p-5 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
+                  <span className="text-[10px] font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
                     04
                   </span>
                   <ShieldCheck className="w-4 h-4 text-[#6B7280]" />
                 </div>
                 <h3 className="text-sm font-bold text-[#111827]">VALIDATE</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   Apply deterministic rules, time windows, duplicate checks, and threshold validation where supported.
                 </p>
               </div>
@@ -893,13 +892,13 @@ export default function LandingPage() {
               {/* Stage 05 */}
               <div className="p-5 rounded-xl bg-[#F7F8FA] border border-[#E5E7EB] shadow-subtle space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
+                  <span className="text-[10px] font-bold text-[#B45309] bg-orange-100 border border-orange-200 px-2 py-0.5 rounded">
                     05
                   </span>
                   <FileCheck2 className="w-4 h-4 text-[#6B7280]" />
                 </div>
                 <h3 className="text-sm font-bold text-[#111827]">CLAIM OR LOG</h3>
-                <p className="text-xs text-[#4B5563] leading-relaxed">
+                <p className="text-xs text-[#4B5563] leading-relaxed font-normal">
                   Prepare a claim for review when evidence supports recovery, or preserve a documented non-claim rationale.
                 </p>
               </div>
@@ -929,13 +928,13 @@ export default function LandingPage() {
         <section id="traceability" className="py-20 bg-[#F7F8FA] border-b border-[#E5E7EB] scroll-mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-12">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#FF9900]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#FF9900]">
                 UNBROKEN AUDIT TRAIL
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#111827] tracking-tight mt-1.5">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight mt-1.5">
                 Trace every recovery decision back to its source.
               </h2>
-              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#4B5563] mt-3 leading-relaxed font-normal">
                 Every supported recovery decision should be traceable from the claim to the underlying charge, matching
                 identifiers, evidence records, and assessment outcome.
               </p>
@@ -946,7 +945,7 @@ export default function LandingPage() {
               <span className="text-xs font-semibold text-[#111827]">
                 Provenential Lineage Graph: Claim &rarr; Charge &rarr; Context &rarr; Evidence &rarr; Decision
               </span>
-              <span className="text-[10px] font-mono uppercase bg-amber-50 text-amber-800 border border-amber-300 px-2 py-0.5 rounded font-bold">
+              <span className="text-[10px] uppercase bg-amber-50 text-amber-800 border border-amber-300 px-2 py-0.5 rounded font-bold">
                 Illustrative Example
               </span>
             </div>
@@ -962,17 +961,17 @@ export default function LandingPage() {
                   <div>
                     <div className="flex items-center space-x-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-[#111827]">Recovery Claim</span>
-                      <span className="text-[10px] font-mono bg-white border border-[#E5E7EB] px-1.5 py-0.2 rounded text-[#2563EB] font-bold">
+                      <span className="text-[10px] font-mono bg-white border border-[#E5E7EB] px-1.5 py-0.2 rounded text-[#2563EB] font-semibold">
                         CLM-2026-0884
                       </span>
                     </div>
-                    <p className="text-xs text-[#4B5563] mt-0.5">
+                    <p className="text-xs text-[#4B5563] mt-0.5 font-normal">
                       Prepared with formal dispute narrative dossier, factual comparison, and proof citations.
                     </p>
                   </div>
                 </div>
-                <div className="text-left md:text-right font-mono text-xs shrink-0">
-                  <span className="text-[#067D68] font-bold">$38.00 Recoverable</span>
+                <div className="text-left md:text-right text-xs shrink-0">
+                  <span className="text-[#067D68] font-bold tabular-nums">$38.00 Recoverable</span>
                 </div>
               </div>
 
@@ -992,17 +991,17 @@ export default function LandingPage() {
                   <div>
                     <div className="flex items-center space-x-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-[#111827]">Marketplace Charge</span>
-                      <span className="text-[10px] font-mono bg-white border border-[#E5E7EB] px-1.5 py-0.2 rounded text-[#111827] font-bold">
+                      <span className="text-[10px] font-mono bg-white border border-[#E5E7EB] px-1.5 py-0.2 rounded text-[#111827] font-semibold">
                         CH-TC07-DUPLICATE
                       </span>
                     </div>
-                    <p className="text-xs text-[#4B5563] mt-0.5">
+                    <p className="text-xs text-[#4B5563] mt-0.5 font-normal">
                       Inbound Defect Fee &bull; Alleged packaging non-compliance &bull; Settlement report item.
                     </p>
                   </div>
                 </div>
-                <div className="text-left md:text-right font-mono text-xs shrink-0">
-                  <span className="text-[#C40000] font-bold">$38.00 Deduction</span>
+                <div className="text-left md:text-right text-xs shrink-0">
+                  <span className="text-[#C40000] font-bold tabular-nums">$38.00 Deduction</span>
                 </div>
               </div>
 
@@ -1023,23 +1022,23 @@ export default function LandingPage() {
                     <div className="flex items-center space-x-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-[#111827]">Shipment / Order / SKU</span>
                     </div>
-                    <div className="flex flex-wrap gap-2 pt-1 font-mono text-[11px]">
+                    <div className="flex flex-wrap gap-2 pt-1 text-[11px]">
                       <span className="px-2 py-0.5 bg-white border border-[#E5E7EB] rounded text-[#4B5563]">
-                        Shipment: <strong className="text-[#111827]">FBA17Z9K2L</strong>
+                        Shipment: <strong className="text-[#111827] font-mono">FBA17Z9K2L</strong>
                       </span>
                       <span className="px-2 py-0.5 bg-white border border-[#E5E7EB] rounded text-[#4B5563]">
-                        Order: <strong className="text-[#111827]">#114-883109</strong>
+                        Order: <strong className="text-[#111827] font-mono">#114-883109</strong>
                       </span>
                       <span className="px-2 py-0.5 bg-white border border-[#E5E7EB] rounded text-[#4B5563]">
-                        SKU: <strong className="text-[#111827]">SKU-WIDGET-01</strong>
+                        SKU: <strong className="text-[#111827] font-mono">SKU-WIDGET-01</strong>
                       </span>
                       <span className="px-2 py-0.5 bg-white border border-[#E5E7EB] rounded text-[#4B5563]">
-                        Unit: <strong className="text-[#2563EB]">UNIT-TC07</strong>
+                        Unit: <strong className="text-[#2563EB] font-mono">UNIT-TC07</strong>
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="text-left md:text-right font-mono text-xs text-[#6B7280] shrink-0">
+                <div className="text-left md:text-right text-xs text-[#6B7280] shrink-0 font-medium">
                   Resolved via Entity Matcher
                 </div>
               </div>
@@ -1060,16 +1059,16 @@ export default function LandingPage() {
                   <div>
                     <div className="flex items-center space-x-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-[#111827]">Evidence Record</span>
-                      <span className="text-[10px] font-mono bg-white border border-[#E5E7EB] px-1.5 py-0.2 rounded text-[#067D68] font-bold">
+                      <span className="text-[10px] font-mono bg-white border border-[#E5E7EB] px-1.5 py-0.2 rounded text-[#067D68] font-semibold">
                         PRP-TC07
                       </span>
                     </div>
-                    <p className="text-xs text-[#4B5563] mt-0.5">
+                    <p className="text-xs text-[#4B5563] mt-0.5 font-normal">
                       Prep station optical scan &bull; Polybag present & sealed &bull; Certified warning printed.
                     </p>
                   </div>
                 </div>
-                <div className="text-left md:text-right font-mono text-xs text-[#067D68] font-bold shrink-0">
+                <div className="text-left md:text-right text-xs text-[#067D68] font-bold shrink-0">
                   PASS (Compliant)
                 </div>
               </div>
@@ -1090,7 +1089,7 @@ export default function LandingPage() {
                   <div>
                     <div className="flex items-center space-x-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-emerald-900">Assessment Decision</span>
-                      <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 border border-emerald-300 px-2 py-0.5 rounded font-bold">
+                      <span className="text-[10px] bg-emerald-100 text-emerald-800 border border-emerald-300 px-2 py-0.5 rounded font-bold">
                         CONTRADICTED
                       </span>
                     </div>
@@ -1099,7 +1098,7 @@ export default function LandingPage() {
                     </p>
                   </div>
                 </div>
-                <div className="text-left md:text-right font-mono text-xs text-emerald-800 font-bold shrink-0">
+                <div className="text-left md:text-right text-xs text-emerald-800 font-bold shrink-0">
                   Defensible Claim
                 </div>
               </div>
@@ -1112,10 +1111,19 @@ export default function LandingPage() {
         {/* ============================================================ */}
         <section className="py-20 bg-white relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+            {/* Recovery Manager Brand Logo in Final CTA */}
+            <div className="w-12 h-12 mx-auto rounded-xl bg-white border border-[#E5E7EB] flex items-center justify-center shadow-subtle p-1.5 mb-2 overflow-hidden">
+              <img
+                src="/brand/recovery-manager-logo.png"
+                alt="Recovery Manager"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111827] tracking-tight">
               Launch Recovery Operations
             </h2>
-            <p className="text-sm sm:text-base text-[#4B5563] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-[#4B5563] max-w-2xl mx-auto leading-relaxed font-normal">
               Audit marketplace charges, inspect supporting evidence, review assessment decisions, prepare defensible
               claims, and track recovery with complete provenance.
             </p>
@@ -1123,7 +1131,7 @@ export default function LandingPage() {
             <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 href="/dashboard"
-                className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#FF9900] hover:bg-[#E88A00] text-[#111827] font-bold text-sm shadow-subtle flex items-center justify-center space-x-2 transition-all duration-150 group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF9900] focus:outline-none"
+                className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#FF9900] hover:bg-[#E88A00] text-[#111827] font-semibold text-sm shadow-subtle flex items-center justify-center space-x-2 transition-all duration-150 group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF9900] focus:outline-none"
               >
                 <span>Enter Dashboard Console</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -1139,13 +1147,15 @@ export default function LandingPage() {
       <footer className="py-10 border-t border-[#E5E7EB] bg-[#F7F8FA] text-xs text-[#6B7280]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center space-x-3">
-            <div className="w-7 h-7 rounded-md bg-orange-50 border border-orange-200 flex items-center justify-center text-[#FF9900]">
-              <Scale className="w-4 h-4" />
+            <div className="w-8 h-8 rounded-lg bg-white border border-[#E5E7EB] flex items-center justify-center shadow-subtle p-1 overflow-hidden shrink-0">
+              <img
+                src="/brand/recovery-manager-logo.png"
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div>
-              <span className="font-bold text-[#111827]">Recovery Manager</span>
-              <span className="text-[10px] text-[#6B7280] ml-2 font-mono">Evidence-First Recovery Ops</span>
-            </div>
+            <span className="font-bold text-[#111827]">Recovery Manager</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6 text-[11px] text-[#4B5563] font-medium">
@@ -1157,7 +1167,7 @@ export default function LandingPage() {
             <Link href="/data-sources" className="hover:text-[#111827] transition-colors">Data Ingestion</Link>
           </div>
 
-          <div className="text-[11px] font-mono text-[#6B7280]">
+          <div className="text-[11px] text-[#6B7280]">
             Deterministic Recovery &bull; Multi-Tenant RLS
           </div>
         </div>
