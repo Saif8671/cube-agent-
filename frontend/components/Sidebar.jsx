@@ -13,6 +13,7 @@ import {
   ChevronRight,
   Activity,
   X,
+  Settings,
 } from "lucide-react";
 
 const NAV_GROUPS = [
@@ -40,6 +41,12 @@ const NAV_GROUPS = [
     title: "DATA",
     items: [
       { name: "Data Ingestion", href: "/data-sources", icon: Database },
+    ],
+  },
+  {
+    title: "SYSTEM",
+    items: [
+      { name: "System & Environment Settings", href: "/settings", icon: Settings },
     ],
   },
 ];
